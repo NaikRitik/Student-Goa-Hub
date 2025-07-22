@@ -1,0 +1,109 @@
+/* Custom Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; /* Lighter, cleaner background (slate-50) */
+    color: #334155; /* slate-700 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header Styling */
+#header {
+    transition: background-color 0.3s ease;
+}
+
+/* Navigation Link Styling */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0ea5e9; /* sky-500 */
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #0369a1; /* sky-700 */
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Card Styling */
+.resource-card, .career-card, .announcement-card {
+    transition: transform 0.3s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+    border: 1px solid #e2e8f0; /* slate-200 */
+}
+
+.resource-card:hover, .career-card:hover, .announcement-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.08);
+    border-color: #3b82f6; /* blue-500 */
+}
+
+/* Modal Styling */
+.modal {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-content {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Custom Gradient for Buttons */
+.btn-gradient {
+    background-image: linear-gradient(to right, #38bdf8, #3b82f6);
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4);
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* Chart Container */
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+}
+
+/* Accordion Icon transition */
+.skill-icon {
+    transition: transform 0.3s ease;
+}
+
+.skill-accordion-header[aria-expanded="true"] .skill-icon {
+    transform: rotate(45deg);
+}
+
+/* Section Heading Underline */
+.section-heading::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #3b82f6;
+    margin: 16px auto 0;
+    border-radius: 2px;
+}
+
+/* Input focus styles */
+input:focus, select:focus, textarea:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
